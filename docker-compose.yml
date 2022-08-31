@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  postgresql145:
+    image: postgres:14.5
+    container_name: postgresql145
+    hostname: postgresql-14.5
+    environment:
+      - POSTGRES_PASSWORD=root
+    volumes:
+      - ~/docker-tmp/postgresql145:/var/lib/postgresql/data
+    ports:
+      - "5932:5432"
